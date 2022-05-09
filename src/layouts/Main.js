@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import SearchBar from '../components/SearchBar'
 import Trending from '../components/Trending'
-import Card from '../components/Trending/Card'
+import Recommend from '../components/Recommend'
 
 const Main = () => {
   const style = {
@@ -15,6 +15,7 @@ const Main = () => {
     <main css={style}>
       <SearchBar />
       <Trending />
+      <Recommend />
     </main>
   )
 }
