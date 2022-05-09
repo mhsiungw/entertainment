@@ -7,7 +7,7 @@ import 'swiper/css'
 export default () => {
   const renderContent = () => {
     return Array.from({ length: 100 }).map((_, i) => (
-      <SwiperSlide ket={i}>
+      <SwiperSlide key={i}>
         <Card />
       </SwiperSlide>
     ))
@@ -17,8 +17,8 @@ export default () => {
     <div>
       <h2 css={{ marginBottom: '1.6rem' }}>Trending</h2>
       <Swiper
-        spaceBetween={50}
-        slidesPerView={7}
+        spaceBetween={0}
+        slidesPerView={1.4}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >

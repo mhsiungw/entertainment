@@ -34,4 +34,13 @@ export default css`
     outline: none;
     font-family: 'Outfit', sans-serif;
   }
+
+  .swiper-wrapper {
+    gap: 2rem;
+  }
+
+  .swiper-slide {
+    flex-shrink: unset;
+    width: auto !important;
+  }
 `
