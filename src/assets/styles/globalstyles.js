@@ -7,6 +7,7 @@ export default css`
   html {
     font-family: 'Outfit', sans-serif;
     font-size: 62.5%;
+    font-weight: 300;
     box-sizing: border-box;
     background: ${colors.black};
   }

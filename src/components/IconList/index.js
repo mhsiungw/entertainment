@@ -9,7 +9,6 @@ import { ReactComponent as BookMark } from '../../assets/icon/icon-nav-bookmark.
 const Index = () => {
   return (
     <IconList>
-      <div>HAHAHA</div>
       <Icon children={Home} />
       <Icon children={Movies} />
       <Icon children={TV} />

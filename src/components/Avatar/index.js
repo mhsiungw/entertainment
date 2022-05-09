@@ -10,7 +10,7 @@ const Index = () => {
     cursor: 'pointer',
   }
 
-  return <img css={style} src="https://shorturl.at/rMNPU" />
+  return <img css={style} src="http://cdn.shopify.com/s/files/1/1566/2889/articles/PORTADA-TC.jpg?v=1625573349" />
 }
 
 export default Index
