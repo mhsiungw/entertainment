@@ -1,10 +1,20 @@
 /** @jsxImportSource @emotion/react */
 import SearchBar from '../components/SearchBar'
+import Trending from '../components/Trending'
+import Card from '../components/Trending/Card'
 
 const Main = () => {
+  const style = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2rem',
+    padding: '2rem 1.6rem',
+  }
+
   return (
-    <main css={{ padding: '2rem 1.6rem' }}>
+    <main css={style}>
       <SearchBar />
+      <Trending />
     </main>
   )
 }
