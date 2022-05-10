@@ -24,7 +24,6 @@ const Card = ({ movie }) => {
     [mq[1]]: {
       minHeight: '23rem',
     },
-
     borderRadius: '.8rem',
     padding: '0 .8rem 1.6rem 1.6rem',
   }
