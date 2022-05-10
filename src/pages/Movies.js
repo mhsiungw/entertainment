@@ -1,6 +1,6 @@
 import React from 'react'
 import Main from 'layouts/Main'
-import Recommend from '../components/Recommend'
+import Recommend from '../components/CardList'
 
 const Movies = () => {
   return (

@@ -18,13 +18,7 @@ export default () => {
   return (
     <div>
       <h2 css={{ marginBottom: '1.6rem' }}>Trending</h2>
-      <Swiper
-        spaceBetween={16}
-        slidesPerView={2.2}
-        loop={true}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
+      <Swiper spaceBetween={16} slidesPerView={2.2} loop={true} onSlideChange={() => {}} onSwiper={(swiper) => {}}>
         {renderContent()}
       </Swiper>
     </div>

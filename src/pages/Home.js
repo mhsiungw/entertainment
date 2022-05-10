@@ -1,5 +1,5 @@
 import Trending from 'components/Trending'
-import Recommend from '../components/Recommend'
+import Recommend from '../components/CardList'
 
 import Main from '../layouts/Main'
 

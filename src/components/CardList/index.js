@@ -1,10 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import Card from '../Recommend/Card'
 import { useTheme } from '@emotion/react'
-import { useState } from 'react'
-import dummyData from 'data'
+import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import Card from './Card'
+import dummyData from 'data'
 
 const Index = ({ title }) => {
   useEffect(() => {
@@ -21,6 +20,7 @@ const Index = ({ title }) => {
         break
     }
   }, [])
+
   const { pathname } = useLocation()
   const [movies, setMovies] = useState(dummyData)
   const { useMedia } = useTheme()
@@ -30,7 +30,7 @@ const Index = ({ title }) => {
     return movies.map((movie, i) => <Card key={i} movie={movie} />)
   }
 
-  const cardListStype = {
+  const cardListStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat( auto-fit, minmax(16rem, 1fr) )',
     [mq[0]]: {
@@ -48,7 +48,7 @@ const Index = ({ title }) => {
   return (
     <div>
       <h2 css={{ marginBottom: '1.6rem' }}>{title}</h2>
-      <div css={cardListStype}>{renderContent()}</div>
+      <div css={cardListStyle}>{renderContent()}</div>
     </div>
   )
 }
