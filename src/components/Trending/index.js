@@ -20,13 +20,7 @@ export default () => {
       <h2 css={{ marginBottom: '1.6rem' }}>Trending</h2>
       <Swiper
         spaceBetween={16}
-        slidesPerView={2}
-        breakpoints={{
-          1100: {
-            slidesPerView: 3,
-            spaceBetween: 16,
-          },
-        }}
+        slidesPerView={2.2}
         loop={true}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
