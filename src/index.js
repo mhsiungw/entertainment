@@ -7,6 +7,7 @@ import globalstyles from './assets/styles/globalstyles'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from 'pages/Home'
 import Movies from 'pages/Movies'
+import Series from 'pages/Series'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -19,6 +20,7 @@ root.render(
           <Route path="/" element={<App />}>
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
+            <Route path="/series" element={<Series />} />
           </Route>
         </Routes>
       </BrowserRouter>
