@@ -8,11 +8,12 @@ const Layout = (props) => {
   const style = {
     display: 'flex',
     flexDirection: 'column',
+    maxWidth: '768px',
+    justifyContent: 'center',
     [mq[1]]: {
       flexDirection: 'row',
+      maxWidth: '100vw',
     },
-    maxWidth: '768px',
-    margin: '0 auto',
   }
 
   return <div css={style} {...props} />

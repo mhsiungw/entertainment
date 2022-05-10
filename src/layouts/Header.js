@@ -13,7 +13,7 @@ const Header = () => {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '2rem 2rem',
-    [mq[2]]: {
+    [mq[1]]: {
       flexDirection: 'column',
       maxHeight: '100vh',
       position: 'sticky',
