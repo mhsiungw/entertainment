@@ -3,13 +3,31 @@ import Card from '../Recommend/Card'
 import { useTheme } from '@emotion/react'
 import { useState } from 'react'
 import dummyData from 'data'
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
-const Index = () => {
-  const { useMedia } = useTheme()
+const Index = ({ title }) => {
+  useEffect(() => {
+    switch (pathname) {
+      case '/':
+        break
+      case '/movies':
+        setMovies(movies.filter((m) => m.type === 'movie'))
+        break
+      case '/series':
+        setMovies(movies.filter((m) => m.type === 'series'))
+        break
+      default:
+        break
+    }
+  }, [])
+  const { pathname } = useLocation()
   const [movies, setMovies] = useState(dummyData)
+  const { useMedia } = useTheme()
   const mq = useMedia()
+
   const renderContent = () => {
-    return movies.map((movie) => <Card movie={movie} />)
+    return movies.map((movie, i) => <Card key={i} movie={movie} />)
   }
 
   const cardListStype = {
@@ -29,7 +47,7 @@ const Index = () => {
 
   return (
     <div>
-      <h2 css={{ marginBottom: '1.6rem' }}>Recommended for you</h2>
+      <h2 css={{ marginBottom: '1.6rem' }}>{title}</h2>
       <div css={cardListStype}>{renderContent()}</div>
     </div>
   )
