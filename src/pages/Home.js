@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Main>
       <Trending />
-      <Recommend />
+      <Recommend title="Recommended for you" />
     </Main>
   )
 }
