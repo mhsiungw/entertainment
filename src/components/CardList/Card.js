@@ -42,10 +42,16 @@ const Card = ({ item }) => {
     cursor: 'pointer',
   }
 
+  const isBookMarked = () => {
+    let StorageValue = JSON.parse(localStorage.getItem('movies'))
+    console.log(StorageValue.some((v) => v.name === item.name))
+    return StorageValue.some((v) => v.name === item.name)
+  }
+
   return (
     <div>
       <div className="bookmark__container" data-movie={item.name} css={BackGroundStyle}>
-        <Bookmark />
+        <Bookmark isBookMarked={isBookMarked()} />
       </div>
       <div>
         <div css={{ opacity: 0.75, fontSize: '1.2rem' }}>2019．Movie．PG</div>
