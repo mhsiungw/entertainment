@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Trending from 'components/Trending'
 import Recommend from '../components/Recommend'
 

@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react'
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 

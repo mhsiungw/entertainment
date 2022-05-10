@@ -1,7 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import SearchBar from '../components/SearchBar'
-import Trending from '../components/Trending'
-import Recommend from '../components/Recommend'
 import { useTheme } from '@emotion/react'
 
 const Main = ({ children }) => {
