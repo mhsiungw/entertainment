@@ -1,11 +1,14 @@
 import React from 'react'
 import Main from 'layouts/Main'
-import Recommend from '../components/CardList'
+import CardList from '../components/CardList'
+import dummyData from 'data'
 
 const Series = () => {
+  const filterDate = dummyData.filter((m) => m.type === 'series')
+
   return (
     <Main>
-      <Recommend title="Series" />
+      <CardList title="Series" items={filterDate} />
     </Main>
   )
 }

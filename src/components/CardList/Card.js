@@ -2,7 +2,7 @@
 import { useTheme } from '@emotion/react'
 import { ReactComponent as BookMark } from '../../assets/icon/icon-bookmark-empty.svg'
 
-const Card = ({ movie }) => {
+const Card = ({ item }) => {
   const { useMedia, colors } = useTheme()
   const mq = useMedia()
 
@@ -11,12 +11,12 @@ const Card = ({ movie }) => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    backgroundImage: `url(${movie.regular.small})`,
+    backgroundImage: `url(${item.regular.small})`,
     [mq[1]]: {
-      backgroundImage: `url(${movie.regular.medium})`,
+      backgroundImage: `url(${item.regular.medium})`,
     },
     [mq[2]]: {
-      backgroundImage: `url(${movie.regular.large})`,
+      backgroundImage: `url(${item.regular.large})`,
     },
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -51,7 +51,7 @@ const Card = ({ movie }) => {
       </div>
       <div>
         <div css={{ opacity: 0.75, fontSize: '1.2rem' }}>2019．Movie．PG</div>
-        <h3 css={{ fontWeight: 300, fontSize: '1.5rem' }}>{movie.name}</h3>
+        <h3 css={{ fontWeight: 300, fontSize: '1.5rem' }}>{item.name}</h3>
       </div>
     </div>
   )

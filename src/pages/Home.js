@@ -1,13 +1,13 @@
 import Trending from 'components/Trending'
-import Recommend from '../components/CardList'
-
+import CardList from '../components/CardList'
 import Main from '../layouts/Main'
+import dummyData from 'data'
 
 const Home = () => {
   return (
     <Main>
       <Trending />
-      <Recommend title="Recommended for you" />
+      <CardList title="Recommended for you" items={dummyData} />
     </Main>
   )
 }

@@ -1,33 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { useTheme } from '@emotion/react'
-import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
 import Card from './Card'
-import dummyData from 'data'
 
-const Index = ({ title }) => {
-  useEffect(() => {
-    switch (pathname) {
-      case '/':
-        break
-      case '/movies':
-        setMovies(movies.filter((m) => m.type === 'movie'))
-        break
-      case '/series':
-        setMovies(movies.filter((m) => m.type === 'series'))
-        break
-      default:
-        break
-    }
-  }, [])
-
-  const { pathname } = useLocation()
-  const [movies, setMovies] = useState(dummyData)
+const Index = ({ title, items }) => {
   const { useMedia } = useTheme()
   const mq = useMedia()
 
   const renderContent = () => {
-    return movies.map((movie, i) => <Card key={i} movie={movie} />)
+    return items.map((item, i) => <Card key={i} item={item} />)
   }
 
   const cardListStyle = {
