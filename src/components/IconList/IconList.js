@@ -9,7 +9,7 @@ const IconList = ({ children }) => {
     display: 'flex',
     alignItems: 'center',
     gap: '2.4rem',
-    [mq[2]]: {
+    [mq[1]]: {
       flexDirection: 'column',
     },
   }
