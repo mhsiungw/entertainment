@@ -40,7 +40,5 @@ export default css`
   }
 
   .swiper-slide {
-    flex-shrink: unset;
-    width: auto !important;
   }
 `

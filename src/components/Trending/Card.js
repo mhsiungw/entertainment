@@ -12,8 +12,8 @@ const Card = () => {
     justifyContent: 'flex-end',
     background: `url(${require('../../assets/thumbnails/beyond-earth/trending/small.jpg')}) no-repeat`,
     backgroundSize: 'cover',
-    width: '24rem',
-    height: '14rem',
+    width: '100%',
+    minHeight: '11rem',
     borderRadius: '.8rem',
     padding: '0 .8rem 1.6rem 1.6rem',
   }
