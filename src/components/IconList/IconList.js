@@ -1,9 +1,20 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react'
-import { css } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 
 const IconList = ({ children }) => {
-  return <ul css={{ display: 'flex', alignItems: 'center', gap: '2.4rem' }}>{children}</ul>
+  const { useMedia } = useTheme()
+  const mq = useMedia()
+
+  const style = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '2.4rem',
+    [mq[2]]: {
+      flexDirection: 'column',
+    },
+  }
+
+  return <ul css={style}>{children}</ul>
 }
 
 export default IconList
