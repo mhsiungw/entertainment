@@ -4,7 +4,7 @@ import Trending from '../components/Trending'
 import Recommend from '../components/Recommend'
 import { useTheme } from '@emotion/react'
 
-const Main = () => {
+const Main = ({ children }) => {
   const { useMedia, colors } = useTheme()
   const mq = useMedia()
 
@@ -21,8 +21,7 @@ const Main = () => {
   return (
     <main css={style}>
       <SearchBar />
-      <Trending />
-      <Recommend />
+      {children}
     </main>
   )
 }
