@@ -12,7 +12,8 @@ const Layout = (props) => {
     justifyContent: 'center',
     [mq[1]]: {
       flexDirection: 'row',
-      maxWidth: '100vw',
+      maxWidth: 'unset',
+      width: '1440px',
     },
   }
 

@@ -41,4 +41,11 @@ export default css`
 
   .swiper-slide {
   }
+
+  @media screen and (min-width: 768px) {
+    #root {
+      display: flex;
+      justify-content: center;
+    }
+  }
 `
