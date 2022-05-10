@@ -2,7 +2,7 @@
 import { useTheme } from '@emotion/react'
 import Bookmark from 'components/Bookmark'
 
-const Card = ({ item }) => {
+const Card = ({ item, setData }) => {
   const { useMedia, colors } = useTheme()
   const mq = useMedia()
 
@@ -51,7 +51,7 @@ const Card = ({ item }) => {
   return (
     <div>
       <div className="bookmark__container" data-movie={item.name} css={BackGroundStyle}>
-        <Bookmark isBookMarked={isBookMarked()} />
+        <Bookmark setData={setData} isBookMarked={isBookMarked()} />
       </div>
       <div>
         <div css={{ opacity: 0.75, fontSize: '1.2rem' }}>2019．Movie．PG</div>

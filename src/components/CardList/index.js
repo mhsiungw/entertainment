@@ -2,12 +2,12 @@
 import { useTheme } from '@emotion/react'
 import Card from './Card'
 
-const Index = ({ title, items }) => {
+const Index = ({ title, items, setData }) => {
   const { useMedia } = useTheme()
   const mq = useMedia()
 
   const renderContent = () => {
-    return items.map((item, i) => <Card key={i} item={item} />)
+    return items.map((item, i) => <Card setData={setData} key={i} item={item} />)
   }
 
   const cardListStyle = {

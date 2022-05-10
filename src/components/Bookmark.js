@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react'
 import { useState } from 'react'
 import dummyData from 'data'
 
-const Bookmark = ({ isBookMarked: _isBookMarked }) => {
+const Bookmark = ({ isBookMarked: _isBookMarked, setData }) => {
   const { colors } = useTheme()
   const [isBookMarked, setBookMark] = useState(_isBookMarked)
 
@@ -37,6 +37,10 @@ const Bookmark = ({ isBookMarked: _isBookMarked }) => {
     let filteredStorageValue = storageValue.filter((v) => v.name !== value)
     let stringifyValue = JSON.stringify(filteredStorageValue)
     localStorage.setItem(key, stringifyValue)
+    // delete bookmark immediately
+    if (setData) {
+      setData(filteredStorageValue)
+    }
   }
 
   const toggleBookMark = (e) => {
