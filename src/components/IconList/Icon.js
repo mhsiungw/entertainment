@@ -1,13 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react'
 import { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
-const Icon = (props) => {
-  const IconSVG = props.children
+const Icon = ({ children: IconSVG, route }) => {
   return (
     <Fragment>
       <li>
-        <IconSVG css={{ cursor: 'pointer' }} />
+        <Link to={route}>
+          <IconSVG css={{ cursor: 'pointer' }} />
+        </Link>
       </li>
     </Fragment>
   )
