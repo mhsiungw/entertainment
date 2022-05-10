@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useTheme } from '@emotion/react'
-import { ReactComponent as BookMark } from '../../assets/icon/icon-bookmark-empty.svg'
+import Bookmark from 'components/Bookmark'
 
 const Card = ({ item }) => {
   const { useMedia, colors } = useTheme()
@@ -44,10 +44,8 @@ const Card = ({ item }) => {
 
   return (
     <div>
-      <div css={BackGroundStyle}>
-        <span css={BookMarkStyle}>
-          <BookMark />
-        </span>
+      <div className="bookmark__container" data-movie={item.name} css={BackGroundStyle}>
+        <Bookmark />
       </div>
       <div>
         <div css={{ opacity: 0.75, fontSize: '1.2rem' }}>2019．Movie．PG</div>
