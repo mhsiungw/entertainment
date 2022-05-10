@@ -5,13 +5,20 @@ import Logo from '../components/Logo'
 import { useTheme } from '@emotion/react'
 
 const Header = () => {
-  const { colors } = useTheme()
+  const { useMedia, colors } = useTheme()
+  const mq = useMedia()
 
   const style = {
     backgroundColor: colors.darkBlue,
     display: 'flex',
     justifyContent: 'space-between',
     padding: '2rem 2rem',
+    [mq[2]]: {
+      flexDirection: 'column',
+      maxHeight: '100vh',
+      position: 'sticky',
+      top: 0,
+    },
   }
 
   return (
