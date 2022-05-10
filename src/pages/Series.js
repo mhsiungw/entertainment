@@ -4,11 +4,11 @@ import CardList from '../components/CardList'
 import dummyData from 'data'
 
 const Series = () => {
-  const filterDate = dummyData.filter((m) => m.type === 'series')
+  const filterData = dummyData.filter((m) => m.type === 'series')
 
   return (
     <Main>
-      <CardList title="Series" items={filterDate} />
+      <CardList title="Series" items={filterData} />
     </Main>
   )
 }
