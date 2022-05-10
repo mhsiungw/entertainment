@@ -1,12 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import Card from '../Recommend/Card'
 import { useTheme } from '@emotion/react'
+import { useState } from 'react'
+import dummyData from 'data'
 
 const Index = () => {
   const { useMedia } = useTheme()
+  const [movies, setMovies] = useState(dummyData)
   const mq = useMedia()
   const renderContent = () => {
-    return Array.from({ length: 100 }).map((_) => <Card />)
+    return movies.map((movie) => <Card movie={movie} />)
   }
 
   const cardListStype = {

@@ -2,7 +2,7 @@
 import { useTheme } from '@emotion/react'
 import { ReactComponent as BookMark } from '../../assets/icon/icon-bookmark-empty.svg'
 
-const Card = () => {
+const Card = ({ movie }) => {
   const { useMedia, colors } = useTheme()
   const mq = useMedia()
 
@@ -11,8 +11,16 @@ const Card = () => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    background: `url(${require('../../assets/thumbnails/beyond-earth/trending/small.jpg')}) no-repeat`,
+    backgroundImage: `url(${movie.regular.small})`,
+    [mq[1]]: {
+      backgroundImage: `url(${movie.regular.medium})`,
+    },
+    [mq[2]]: {
+      backgroundImage: `url(${movie.regular.large})`,
+    },
+    backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
     borderRadius: '.8rem',
     padding: '0 .8rem 1.6rem 1.6rem',
     width: '100%',
@@ -43,7 +51,7 @@ const Card = () => {
       </div>
       <div>
         <div css={{ opacity: 0.75, fontSize: '1.2rem' }}>2019．Movie．PG</div>
-        <h3 css={{ fontWeight: 300, fontSize: '1.5rem' }}>Beyond Earth</h3>
+        <h3 css={{ fontWeight: 300, fontSize: '1.5rem' }}>{movie.name}</h3>
       </div>
     </div>
   )
