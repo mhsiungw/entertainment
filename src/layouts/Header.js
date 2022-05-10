@@ -15,7 +15,7 @@ const Header = () => {
     padding: '2rem 2rem',
     [mq[1]]: {
       flexDirection: 'column',
-      maxHeight: '100vh',
+      height: '100vh',
       position: 'sticky',
       top: 0,
     },
