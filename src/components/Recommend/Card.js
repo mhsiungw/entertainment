@@ -34,10 +34,8 @@ const Card = () => {
     cursor: 'pointer',
   }
 
-  const CardStyle = { width: '45%', [mq[0]]: { maxWidth: '28rem', flexGrow: 1 } }
-
   return (
-    <div css={CardStyle}>
+    <div>
       <div css={BackGroundStyle}>
         <span css={BookMarkStyle}>
           <BookMark />

@@ -10,14 +10,18 @@ const Index = () => {
   }
 
   const cardListStype = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    display: 'grid',
+    gridTemplateColumns: 'repeat( auto-fit, minmax(16rem, 1fr) )',
     [mq[0]]: {
-      justifyContent: 'unset',
-      gap: '1.5rem 2rem',
+      gridTemplateColumns: 'repeat( auto-fit, minmax(20rem, 1fr) )',
     },
-    gap: '1.5rem 0',
+    [mq[1]]: {
+      gridTemplateColumns: 'repeat( auto-fit, minmax(22rem, 1fr) )',
+    },
+    [mq[2]]: {
+      gridTemplateColumns: 'repeat( auto-fit, minmax(28rem, 1fr) )',
+    },
+    gap: '1.5rem',
   }
 
   return (
