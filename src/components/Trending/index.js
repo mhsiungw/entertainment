@@ -1,14 +1,16 @@
 /** @jsxImportSource @emotion/react */
-import { Fragment } from 'react'
+import { useState } from 'react'
 import Card from './Card'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import dummyData from 'data'
 
 export default () => {
+  const [movies, setMovies] = useState(dummyData)
   const renderContent = () => {
-    return Array.from({ length: 5 }).map((_, i) => (
+    return movies.map((movie, i) => (
       <SwiperSlide key={i}>
-        <Card />
+        <Card movie={movie} />
       </SwiperSlide>
     ))
   }
@@ -20,20 +22,8 @@ export default () => {
         spaceBetween={16}
         slidesPerView={2}
         breakpoints={{
-          555: {
+          1100: {
             slidesPerView: 3,
-            spaceBetween: 16,
-          },
-          655: {
-            slidesPerView: 4,
-            spaceBetween: 16,
-          },
-          755: {
-            slidesPerView: 5,
-            spaceBetween: 16,
-          },
-          1300: {
-            slidesPerView: 7,
             spaceBetween: 16,
           },
         }}
