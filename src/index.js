@@ -9,6 +9,7 @@ import Home from 'pages/Home'
 import Movies from 'pages/Movies'
 import Series from 'pages/Series'
 import Bookmark from 'pages/Bookmark'
+import Search from 'pages/Search'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -23,6 +24,7 @@ root.render(
             <Route path="/movies" element={<Movies />} />
             <Route path="/series" element={<Series />} />
             <Route path="/bookmark" element={<Bookmark />} />
+            <Route path="/search" element={<Search />} />
           </Route>
         </Routes>
       </BrowserRouter>
