@@ -1,4 +1,4 @@
-import React from 'react'
+/** @jsxImportSource @emotion/react */
 import Main from 'layouts/Main'
 import CardList from '../components/CardList'
 import dummyData from 'data'

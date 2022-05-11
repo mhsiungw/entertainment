@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import Trending from 'components/Trending'
 import CardList from '../components/CardList'
 import Main from '../layouts/Main'
