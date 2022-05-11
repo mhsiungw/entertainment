@@ -7,7 +7,7 @@ const Index = ({ title, items, setData }) => {
   const mq = useMedia()
 
   const renderContent = () => {
-    return items.map((item, i) => <Card setData={setData} key={i} item={item} />)
+    return items.map((item, i) => <Card setData={setData} key={item.name} item={item} />)
   }
 
   const cardListStyle = {
