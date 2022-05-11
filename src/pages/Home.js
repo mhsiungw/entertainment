@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import Trending from 'components/Trending'
+import Trending from 'components/Carousel'
 import CardList from '../components/CardList'
 import Main from '../layouts/Main'
 import dummyData from 'data'

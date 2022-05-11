@@ -25,7 +25,7 @@ const Header = () => {
     <header css={style}>
       <Logo />
       <IconList />
-      <Avatar />
+      <Avatar img="http://cdn.shopify.com/s/files/1/1566/2889/articles/PORTADA-TC.jpg?v=1625573349" />
     </header>
   )
 }

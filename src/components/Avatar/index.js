@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-const Index = () => {
+const Index = ({ img }) => {
   const style = {
     display: 'inline-block',
     width: '2.4rem',
@@ -10,7 +10,7 @@ const Index = () => {
     cursor: 'pointer',
   }
 
-  return <img css={style} src="http://cdn.shopify.com/s/files/1/1566/2889/articles/PORTADA-TC.jpg?v=1625573349" />
+  return <img css={style} src={img} />
 }
 
 export default Index
