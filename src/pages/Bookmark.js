@@ -9,10 +9,10 @@ const BookMark = () => {
   }, [])
   const [data, setData] = useState([])
 
-  if (!data)
+  if (!data.length)
     return (
       <Main>
-        <div>You haven't bookmarked any thing yet.</div>
+        <h1>You haven't bookmarked any thing yet.</h1>
       </Main>
     )
 
