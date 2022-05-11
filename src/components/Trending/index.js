@@ -18,7 +18,23 @@ export default () => {
   return (
     <div>
       <h2 css={{ marginBottom: '1.6rem' }}>Trending</h2>
-      <Swiper spaceBetween={16} slidesPerView={2.2} loop={true} onSlideChange={() => {}} onSwiper={(swiper) => {}}>
+      <Swiper
+        spaceBetween={16}
+        slidesPerView={2.2}
+        breakpoints={{
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1700: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
+        loop={true}
+        onSlideChange={() => {}}
+        onSwiper={(swiper) => {}}
+      >
         {renderContent()}
       </Swiper>
     </div>

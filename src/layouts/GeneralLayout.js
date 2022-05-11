@@ -8,11 +8,12 @@ const Layout = (props) => {
   const style = {
     display: 'flex',
     flexDirection: 'column',
-    maxWidth: '768px',
     justifyContent: 'center',
     [mq[1]]: {
       flexDirection: 'row',
-      maxWidth: 'unset',
+      minWidth: '768px',
+    },
+    [mq[2]]: {
       width: '1440px',
     },
   }
