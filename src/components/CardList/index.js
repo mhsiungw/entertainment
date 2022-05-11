@@ -17,7 +17,7 @@ const Index = ({ title, items, setData }) => {
       gridTemplateColumns: 'repeat( auto-fit, minmax(22rem, 1fr) )',
     },
     [mq[2]]: {
-      gridTemplateColumns: 'repeat( auto-fit, minmax(26.8rem, 1fr) )',
+      gridTemplateColumns: 'repeat( auto-fit, minmax(26.8rem, 3rem) )',
     },
     gap: '1.5rem',
   }
