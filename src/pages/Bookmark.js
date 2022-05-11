@@ -18,7 +18,7 @@ const BookMark = () => {
 
   return (
     <Main>
-      <CardList title="Series" items={data} setData={setData} />
+      <CardList title="Bookmarked Movies" items={data} setData={setData} />
     </Main>
   )
 }
