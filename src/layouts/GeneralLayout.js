@@ -14,7 +14,7 @@ const Layout = (props) => {
       minWidth: '768px',
     },
     [mq[2]]: {
-      maxWidth: '1440px',
+      width: '1440px',
     },
   }
 
