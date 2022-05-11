@@ -3,12 +3,11 @@ import Card from './Card'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
-export default ({ items }) => {
-  console.log('items', items)
+export default ({ items, update, setUpdate }) => {
   const renderContent = () => {
     return items.map((movie, i) => (
       <SwiperSlide key={i}>
-        <Card item={movie} />
+        <Card update={update} setUpdate={setUpdate} item={movie} />
       </SwiperSlide>
     ))
   }

@@ -1,12 +1,20 @@
 /** @jsxImportSource @emotion/react */
 import { ReactComponent as BookMark } from '../assets/icon/icon-bookmark-empty.svg'
 import { useTheme } from '@emotion/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import dummyData from 'data'
 
-const Bookmark = ({ isBookMarked: _isBookMarked, setData }) => {
+const Bookmark = ({ isBookMarked: _isBookMarked, setData, setUpdate }) => {
   const { colors } = useTheme()
   const [isBookMarked, setBookMark] = useState(_isBookMarked)
+
+  useEffect(() => {
+    ;(async () => {
+      console.log('useEffect', _isBookMarked)
+      await setBookMark(_isBookMarked)
+      console.log('useEffect', _isBookMarked)
+    })()
+  }, [_isBookMarked])
 
   const BookMarkStyle = {
     position: 'absolute',
@@ -49,9 +57,11 @@ const Bookmark = ({ isBookMarked: _isBookMarked, setData }) => {
       let movieData = dummyData.find((d) => d.name === movie)
       addLocalStorage('movies', movieData)
       setBookMark(true)
+      setUpdate({})
     } else {
-      deleteLocalStorage('movies', movie)
       setBookMark(false)
+      deleteLocalStorage('movies', movie)
+      setUpdate({})
     }
   }
 

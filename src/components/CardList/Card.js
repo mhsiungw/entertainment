@@ -1,10 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import { useTheme } from '@emotion/react'
+import { useEffect, useState } from 'react'
 import Bookmark from 'components/Bookmark'
 
-const Card = ({ item, setData }) => {
+const Card = ({ item, setData, update, setUpdate }) => {
   const { useMedia } = useTheme()
   const mq = useMedia()
+  const [isBookMarked, setIsBookmared] = useState('')
+
+  useEffect(() => {
+    let storageValue = JSON.parse(localStorage.getItem('movies'))
+    if (!Array.isArray(storageValue)) return
+    setIsBookmared(storageValue.some((v) => v.name === item.name))
+  }, [update])
 
   const BackGroundStyle = {
     position: 'relative',
@@ -27,15 +35,10 @@ const Card = ({ item, setData }) => {
     height: '11rem',
   }
 
-  const isBookMarked = () => {
-    let StorageValue = JSON.parse(localStorage.getItem('movies'))
-    return StorageValue.some((v) => v.name === item.name)
-  }
-
   return (
     <div>
       <div className="bookmark__container" data-movie={item.name} css={BackGroundStyle}>
-        <Bookmark setData={setData} isBookMarked={isBookMarked()} />
+        <Bookmark setUpdate={setUpdate} setData={setData} isBookMarked={isBookMarked} />
       </div>
       <div>
         <div css={{ opacity: 0.75, fontSize: 'clamp(1.1rem, 2.9vw, 1.3rem)' }}>2019．Movie．PG</div>
