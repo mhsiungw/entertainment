@@ -3,7 +3,7 @@ import SearchBar from '../components/SearchBar'
 import { useTheme } from '@emotion/react'
 
 const Main = ({ children }) => {
-  const { useMedia, colors } = useTheme()
+  const { useMedia } = useTheme()
   const mq = useMedia()
 
   const style = {
