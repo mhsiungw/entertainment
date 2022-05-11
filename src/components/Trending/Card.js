@@ -49,8 +49,8 @@ const Card = ({ movie }) => {
         <BookMark />
       </span>
       <div>
-        <div css={{ opacity: 0.75, fontSize: '1.2rem' }}>2019．Movie．PG</div>
-        <h3 css={{ fontWeight: 300, fontSize: '1.5rem' }}>{movie.name}</h3>
+        <div css={{ opacity: 0.75, fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>2019．Movie．PG</div>
+        <h3 css={{ fontWeight: 300, fontSize: 'clamp(1.5rem, 3.9vw, 2.4rem)' }}>{movie.name}</h3>
       </div>
     </div>
   )

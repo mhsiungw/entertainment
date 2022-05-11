@@ -17,7 +17,7 @@ export default () => {
 
   return (
     <div>
-      <h2 css={{ marginBottom: '1.6rem' }}>Trending</h2>
+      <h1 css={{ marginBottom: '1.6rem' }}>Trending</h1>
       <Swiper
         spaceBetween={16}
         slidesPerView={2.2}

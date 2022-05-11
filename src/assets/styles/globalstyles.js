@@ -13,8 +13,18 @@ export default css`
   }
 
   body {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: ${colors.white};
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 3.2rem;
+    }
   }
 
   *,

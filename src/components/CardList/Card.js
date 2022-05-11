@@ -3,7 +3,7 @@ import { useTheme } from '@emotion/react'
 import Bookmark from 'components/Bookmark'
 
 const Card = ({ item, setData }) => {
-  const { useMedia, colors } = useTheme()
+  const { useMedia } = useTheme()
   const mq = useMedia()
 
   const BackGroundStyle = {
@@ -27,24 +27,8 @@ const Card = ({ item, setData }) => {
     height: '11rem',
   }
 
-  const BookMarkStyle = {
-    position: 'absolute',
-    right: '.8rem',
-    top: '.8rem',
-    width: '32px',
-    height: '32px',
-    backgroundColor: colors.black,
-    opacity: '0.5',
-    borderRadius: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-  }
-
   const isBookMarked = () => {
     let StorageValue = JSON.parse(localStorage.getItem('movies'))
-    console.log(StorageValue.some((v) => v.name === item.name))
     return StorageValue.some((v) => v.name === item.name)
   }
 
@@ -54,8 +38,8 @@ const Card = ({ item, setData }) => {
         <Bookmark setData={setData} isBookMarked={isBookMarked()} />
       </div>
       <div>
-        <div css={{ opacity: 0.75, fontSize: '1.2rem' }}>2019．Movie．PG</div>
-        <h3 css={{ fontWeight: 300, fontSize: '1.5rem' }}>{item.name}</h3>
+        <div css={{ opacity: 0.75, fontSize: 'clamp(1.1rem, 2.9vw, 1.3rem)' }}>2019．Movie．PG</div>
+        <h3 css={{ fontWeight: 300, fontSize: 'clamp(1.4rem, 3.5vw, 1.8rem)' }}>{item.name}</h3>
       </div>
     </div>
   )

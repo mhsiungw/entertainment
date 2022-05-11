@@ -24,7 +24,7 @@ const Index = ({ title, items, setData }) => {
 
   return (
     <div>
-      <h2 css={{ marginBottom: '1.6rem' }}>{title}</h2>
+      <h1 css={{ marginBottom: '1.6rem' }}>{title}</h1>
       <div css={cardListStyle}>{renderContent()}</div>
     </div>
   )
