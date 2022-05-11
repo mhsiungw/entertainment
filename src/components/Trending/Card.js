@@ -6,7 +6,7 @@ const Card = ({ movie }) => {
   const { colors, useMedia } = useTheme()
   const mq = useMedia()
 
-  const style = {
+  const cardStyle = {
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -44,7 +44,7 @@ const Card = ({ movie }) => {
   }
 
   return (
-    <div css={style}>
+    <div css={cardStyle}>
       <span css={BookMarkStyle}>
         <BookMark />
       </span>
