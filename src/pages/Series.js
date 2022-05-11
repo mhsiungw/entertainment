@@ -8,8 +8,7 @@ const Series = () => {
 
   return (
     <Main>
-      <h2 css={{ marginBottom: '1.6rem' }}>Series</h2>
-      <CardList items={filterData} />
+      <CardList title="Series" items={filterData} />
     </Main>
   )
 }
