@@ -1,16 +1,14 @@
 /** @jsxImportSource @emotion/react */
-import { useState } from 'react'
 import Card from './Card'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import dummyData from 'data'
 
-export default () => {
-  const [movies, setMovies] = useState(dummyData)
+export default ({ items }) => {
+  console.log('items', items)
   const renderContent = () => {
-    return movies.map((movie, i) => (
+    return items.map((movie, i) => (
       <SwiperSlide key={i}>
-        <Card movie={movie} />
+        <Card item={movie} />
       </SwiperSlide>
     ))
   }
@@ -24,10 +22,6 @@ export default () => {
         breakpoints={{
           1200: {
             slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1700: {
-            slidesPerView: 4,
             spaceBetween: 20,
           },
         }}

@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { ReactComponent as BookMark } from '../../assets/icon/icon-bookmark-empty.svg'
+import Bookmark from 'components/Bookmark'
 import { useTheme } from '@emotion/react'
 
-const Card = ({ movie }) => {
+const Card = ({ item }) => {
   const { colors, useMedia } = useTheme()
   const mq = useMedia()
 
@@ -11,12 +11,12 @@ const Card = ({ movie }) => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    backgroundImage: `url(${movie.regular.small})`,
+    backgroundImage: `url(${item.regular.small})`,
     [mq[1]]: {
-      backgroundImage: `url(${movie.regular.medium})`,
+      backgroundImage: `url(${item.regular.medium})`,
     },
     [mq[2]]: {
-      backgroundImage: `url(${movie.regular.large})`,
+      backgroundImage: `url(${item.regular.large})`,
     },
     backgroundSize: 'cover',
     width: '100%',
@@ -43,14 +43,17 @@ const Card = ({ movie }) => {
     cursor: 'pointer',
   }
 
+  const isBookMarked = () => {
+    let StorageValue = JSON.parse(localStorage.getItem('movies'))
+    return StorageValue.some((v) => v.name === item.name)
+  }
+
   return (
-    <div css={cardStyle}>
-      <span css={BookMarkStyle}>
-        <BookMark />
-      </span>
+    <div className="bookmark__container" data-movie={item.name} css={cardStyle}>
+      <Bookmark isBookMarked={isBookMarked()} />
       <div>
         <div css={{ opacity: 0.75, fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>2019．Movie．PG</div>
-        <h3 css={{ fontWeight: 300, fontSize: 'clamp(1.5rem, 3.9vw, 2.4rem)' }}>{movie.name}</h3>
+        <h3 css={{ fontWeight: 300, fontSize: 'clamp(1.5rem, 3.9vw, 2.4rem)' }}>{item.name}</h3>
       </div>
     </div>
   )
