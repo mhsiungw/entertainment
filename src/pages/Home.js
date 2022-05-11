@@ -6,8 +6,9 @@ import dummyData from 'data'
 const Home = () => {
   return (
     <Main>
+      <h2 css={{ marginBottom: '1.6rem' }}>Recommended for you</h2>
       <Trending />
-      <CardList title="Recommended for you" items={dummyData} />
+      <CardList items={dummyData} />
     </Main>
   )
 }

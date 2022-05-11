@@ -2,7 +2,7 @@
 import { useTheme } from '@emotion/react'
 import Card from './Card'
 
-const Index = ({ title, items, setData }) => {
+const Index = ({ items, setData }) => {
   const { useMedia } = useTheme()
   const mq = useMedia()
 
@@ -27,7 +27,6 @@ const Index = ({ title, items, setData }) => {
 
   return (
     <div>
-      <h2 css={{ marginBottom: '1.6rem' }}>{title}</h2>
       <div css={cardListStyle}>{renderContent()}</div>
     </div>
   )

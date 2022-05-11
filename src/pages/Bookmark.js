@@ -9,16 +9,17 @@ const BookMark = () => {
   }, [])
   const [data, setData] = useState([])
 
-  if (!data)
+  if (!data.length)
     return (
       <Main>
-        <div>You haven't bookmarked any thing yet.</div>
+        <h2>Bookmarked Movies</h2>
       </Main>
     )
 
   return (
     <Main>
-      <CardList title="Series" items={data} setData={setData} />
+      <h2 css={{ marginBottom: '1.6rem' }}>Bookmarked Movies</h2>
+      <CardList title="Bookmarked Movies" items={data} setData={setData} />
     </Main>
   )
 }
