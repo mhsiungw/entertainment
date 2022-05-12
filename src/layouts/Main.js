@@ -10,7 +10,10 @@ const Main = ({ children }) => {
     display: 'flex',
     flexDirection: 'column',
     gap: '2rem',
-    margin: '4.8rem 0',
+    marginTop: '2.4rem',
+    [mq[2]]: {
+      margin: '4.8rem 0',
+    },
     flexGrow: 1,
   }
 
