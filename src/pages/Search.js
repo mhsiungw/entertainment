@@ -2,9 +2,18 @@
 import Main from 'layouts/Main'
 import CardList from '../components/CardList'
 import dummyData from 'assets/data'
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Search = () => {
-  const searchTerm = localStorage.getItem('searchTerm')
+  const location = useLocation()
+
+  useEffect(() => {
+    setSearchTerm(localStorage.getItem('searchTerm'))
+  }, [location])
+
+  const [searchTerm, setSearchTerm] = useState('')
+
   const filterData = dummyData.filter((data) => {
     const dataToUpperCase = data.name.toUpperCase()
     const termToUpperCase = searchTerm.toUpperCase()

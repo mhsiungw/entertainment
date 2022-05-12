@@ -29,7 +29,7 @@ const Index = () => {
         e.preventDefault()
         if (!value) return
         localStorage.setItem('searchTerm', value)
-        navigate('/search')
+        navigate(`/search?${value}`, { replace: true })
       }}
       css={{
         display: 'flex',
