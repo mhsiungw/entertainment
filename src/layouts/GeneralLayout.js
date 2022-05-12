@@ -10,7 +10,7 @@ const Layout = (props) => {
     flexDirection: 'column',
     width: '100vw',
     justifyContent: 'center',
-    [mq[1]]: {
+    [mq[2]]: {
       flexDirection: 'row',
     },
   }

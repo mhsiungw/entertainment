@@ -13,11 +13,15 @@ const Header = () => {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '2rem 2rem',
-    [mq[1]]: {
+    [mq[2]]: {
       flexDirection: 'column',
-      height: '100vh',
+      height: 'calc(100vh - 6.4rem)',
       position: 'sticky',
       top: 0,
+      margin: '3.2rem',
+      borderRadius: '8px',
+      flexBasis: '96px',
+      alignItems: 'center',
     },
   }
 
