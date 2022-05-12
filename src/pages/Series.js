@@ -4,7 +4,7 @@ import CardList from '../components/CardList'
 import dummyData from 'assets/data'
 
 const Series = () => {
-  const filterData = dummyData.filter((m) => m.type === 'series')
+  const filterData = dummyData.filter((m) => m.type === 'Series')
 
   return (
     <Main>

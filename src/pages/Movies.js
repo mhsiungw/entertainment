@@ -4,7 +4,7 @@ import CardList from '../components/CardList'
 import dummyData from 'assets/data'
 
 const Movies = () => {
-  const filterData = dummyData.filter((m) => m.type === 'movie')
+  const filterData = dummyData.filter((m) => m.type === 'Movie')
 
   return (
     <Main>
