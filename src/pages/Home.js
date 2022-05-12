@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import Carousel from 'components/Carousel'
 import CardList from '../components/CardList'
 import Main from '../layouts/Main'

@@ -9,11 +9,7 @@ const Bookmark = ({ isBookMarked: _isBookMarked, setData, setUpdate }) => {
   const [isBookMarked, setBookMark] = useState(_isBookMarked)
 
   useEffect(() => {
-    ;(async () => {
-      console.log('useEffect', _isBookMarked)
-      await setBookMark(_isBookMarked)
-      console.log('useEffect', _isBookMarked)
-    })()
+    setBookMark(_isBookMarked)
   }, [_isBookMarked])
 
   const BookMarkStyle = {
