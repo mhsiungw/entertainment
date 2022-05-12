@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import { ThemeProvider, Global } from '@emotion/react'
 import theme from './assets/styles/theme'
 import globalstyles from './assets/styles/globalstyles'
@@ -17,7 +17,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Global styles={globalstyles} />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<App />}>
             <Route path="/" element={<Home />} />
@@ -27,7 +27,7 @@ root.render(
             <Route path="/search" element={<Search />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   </React.StrictMode>
 )
