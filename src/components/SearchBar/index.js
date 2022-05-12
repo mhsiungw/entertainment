@@ -31,7 +31,12 @@ const Index = () => {
         localStorage.setItem('searchTerm', value)
         navigate('/search')
       }}
-      css={{ display: 'flex', gap: '2rem' }}
+      css={{
+        display: 'flex',
+        gap: '2rem',
+        marginLeft: '1rem',
+        [mq[1]]: { marginLeft: '1.5rem' },
+      }}
     >
       <SearchIcon css={{ transform: 'scale(0.9)' }} />
       <input

@@ -25,7 +25,13 @@ const Index = ({ title, items, setData, update, setUpdate }) => {
   }
 
   return (
-    <div css={{ [mq[2]]: { marginRight: '3.2rem' } }}>
+    <div
+      css={{
+        margin: '0 1.6rem 0 1.6rem',
+        [mq[1]]: { margin: '0 2.4rem 0 2.4rem' },
+        [mq[2]]: { marginRight: '3.2rem' },
+      }}
+    >
       <h1 css={{ marginBottom: '1.6rem' }}>{title}</h1>
       <div css={cardListStyle}>{renderContent()}</div>
     </div>

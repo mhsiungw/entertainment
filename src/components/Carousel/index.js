@@ -1,9 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import Card from './Card'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useTheme } from '@emotion/react'
 import 'swiper/css'
 
 export default ({ items, update, setUpdate }) => {
+  const { useMedia } = useTheme()
+  const mq = useMedia()
+
   const renderContent = () => {
     return items.map((movie, i) => (
       <SwiperSlide key={i}>
@@ -13,7 +17,7 @@ export default ({ items, update, setUpdate }) => {
   }
 
   return (
-    <div>
+    <div css={{ marginLeft: '1.6rem', [mq[1]]: { marginLeft: '2.4rem' } }}>
       <h1 css={{ marginBottom: '1.6rem' }}>Trending</h1>
       <Swiper
         spaceBetween={16}
