@@ -6,13 +6,21 @@ import { useNavigate } from 'react-router-dom'
 
 const Index = () => {
   const [value, setValue] = useState('')
-  const { colors } = useTheme()
+  const { useMedia, colors } = useTheme()
   const navigate = useNavigate()
-  const style = {
+  const mq = useMedia()
+
+  const inputStyle = {
     minHeight: '100%',
     width: '100%',
     backgroundColor: colors.black,
     color: colors.white,
+    fontSize: '1.6rem',
+    [mq[1]]: {
+      fontSize: '2.4rem',
+    },
+    letterSpacing: '1px',
+    fontWeight: 300,
   }
 
   return (
@@ -30,7 +38,7 @@ const Index = () => {
         onChange={(e) => {
           setValue(e.target.value)
         }}
-        css={style}
+        css={inputStyle}
         value={value}
         type="text"
         placeholder="Search from movies or TV series"
