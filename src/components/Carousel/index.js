@@ -23,6 +23,18 @@ export default ({ items, update, setUpdate }) => {
             slidesPerView: 3,
             spaceBetween: 20,
           },
+          1700: {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+          },
+          1800: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          2200: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
         }}
         loop={true}
         onSlideChange={() => {}}

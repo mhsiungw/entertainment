@@ -12,9 +12,6 @@ const Main = ({ children }) => {
     gap: '2rem',
     padding: '2rem 1.6rem',
     flexGrow: 1,
-    [mq[1]]: {
-      maxWidth: '80%',
-    },
   }
 
   return (

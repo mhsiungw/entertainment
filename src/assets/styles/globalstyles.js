@@ -47,6 +47,7 @@ export default css`
 
   .swiper-wrapper {
     gap: 2rem;
+    width: 100px;
   }
 
   .swiper-slide {
