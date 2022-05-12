@@ -2,7 +2,7 @@
 import Carousel from 'components/Carousel'
 import CardList from '../components/CardList'
 import Main from '../layouts/Main'
-import dummyData from 'data'
+import dummyData from 'assets/data'
 import { useState } from 'react'
 
 const Home = () => {

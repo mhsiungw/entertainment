@@ -2,7 +2,7 @@
 import { ReactComponent as BookMark } from '../assets/icon/icon-bookmark-empty.svg'
 import { useTheme } from '@emotion/react'
 import { useState, useEffect } from 'react'
-import dummyData from 'data'
+import dummyData from 'assets/data'
 
 const Bookmark = ({ isBookMarked: _isBookMarked, setData, setUpdate }) => {
   const { colors } = useTheme()

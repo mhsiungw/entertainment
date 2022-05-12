@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import Main from 'layouts/Main'
 import CardList from '../components/CardList'
-import dummyData from 'data'
+import dummyData from 'assets/data'
 
 const Search = () => {
   const searchTerm = localStorage.getItem('searchTerm')

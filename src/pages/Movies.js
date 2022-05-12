@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import Main from 'layouts/Main'
 import CardList from '../components/CardList'
-import dummyData from 'data'
+import dummyData from 'assets/data'
 
 const Movies = () => {
   const filterData = dummyData.filter((m) => m.type === 'movie')
