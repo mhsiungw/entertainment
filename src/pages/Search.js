@@ -5,10 +5,10 @@ import dummyData from 'assets/data'
 
 const Search = () => {
   const searchTerm = localStorage.getItem('searchTerm')
-  const filterData = dummyData.filter((m) => {
-    const o = m.name.toUpperCase()
-    const x = searchTerm.toUpperCase()
-    return o.includes(x)
+  const filterData = dummyData.filter((data) => {
+    const dataToUpperCase = data.name.toUpperCase()
+    const termToUpperCase = searchTerm.toUpperCase()
+    return dataToUpperCase.includes(termToUpperCase)
   })
 
   if (!filterData.length)
