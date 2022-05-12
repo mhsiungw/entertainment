@@ -14,12 +14,12 @@ const Index = ({ title, items, setData, update, setUpdate }) => {
 
   const cardListStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat( auto-fit, minmax(16rem, 1fr) )',
+    gridTemplateColumns: 'repeat( auto-fit, minmax(12rem, 16.3rem) )',
     [mq[1]]: {
-      gridTemplateColumns: 'repeat( auto-fit, minmax(22rem, 1fr) )',
+      gridTemplateColumns: 'repeat( auto-fit, minmax(22rem, 23rem) )',
     },
     [mq[2]]: {
-      gridTemplateColumns: 'repeat( auto-fit, minmax(30rem, 1fr) )',
+      gridTemplateColumns: 'repeat( auto-fit, minmax(23rem, 29rem) )',
     },
     gap: '1.5rem',
   }
