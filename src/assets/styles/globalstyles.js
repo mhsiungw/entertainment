@@ -50,13 +50,5 @@ export default css`
     width: 100px;
   }
 
-  .swiper-slide {
-  }
-
-  @media screen and (min-width: 768px) {
-    #root {
-      display: flex;
-      justify-content: center;
-    }
   }
 `
