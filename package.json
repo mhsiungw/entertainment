@@ -2,7 +2,7 @@
   "name": "entertainment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mhsiungw.github.io/entertainmnent",
+  "homepage": "https://mhsiungw.github.io/entertainment",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@testing-library/jest-dom": "^5.16.4",
