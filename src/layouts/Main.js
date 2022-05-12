@@ -10,7 +10,7 @@ const Main = ({ children }) => {
     display: 'flex',
     flexDirection: 'column',
     gap: '2rem',
-    padding: '2rem 1.6rem',
+    margin: '4.8rem 0',
     flexGrow: 1,
   }
 
